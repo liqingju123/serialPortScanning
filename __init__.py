@@ -8,7 +8,7 @@ from time import sleep
 '''
 扫描可用串口号
 '''   
-def scanning_pord():
+def scanning_port():
     port_list = list(serial.tools.list_ports.comports())  
      
     print len(port_list)  
@@ -24,17 +24,15 @@ def scanning_pord():
 '''
 测试读取 串口数据
 '''
-def read_pord():
+def read_port():
     ser = serial.Serial('/dev/cu.usbserial', 19200, timeout=1)
     print '====='
     while True: 
         line = ser.readlines()
-#         print '===11=='
         if len(line) >0:
             print line,
         else:
             sleep(1)
     
     
-# scanning_pord()    
-read_pord()
+
