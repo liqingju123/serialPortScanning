@@ -3,3 +3,8 @@
 scanning_port() 扫描当前都是那些串口是开放的
 read_port() 读取串口的数据
 ser = serial.Serial('/dev/cu.usbserial', 19200, timeout=1) 一定要看下设备的波率 要不然读取的数据是乱码
+## 强烈推荐 贼好用
+
+需要导入 pyserial 的库
+
+pip install pyserial 
